@@ -8,8 +8,64 @@
   @media screen and (max-width: 1412px)
     @content
 
-// @import font-face(Avenir Next, ../assets/fonts/Avenir Next)
+// Color Variables
 
-@font-face
-  font-family: 'Avenir Next'
-  src: url('../assets/fonts/AvenirNext Bold')
+$red: #b20522
+$yellow: #FFF63B
+$pink: #FF2146
+$cyan: #66fcf1
+$blue: #072836
+$tulsa-yellow: #ffcc00
+$tulsa-black: #1a1a1a
+$tulsa-gray: #e6e6e6
+$hilti-red: #df001b
+$hilti-gray: #c9cfd3
+$wausau-blue: #e4edf0
+$wausau-red: #a80432
+
+
+
+// Styling Classes
+
+.uppercase
+  text-transform: uppercase
+$ff: 'ff-good-headline-web-pro-con'
+
+
+// CSS imports
+
+@import header
+@import hello
+@import flag
+@import hilti
+@import wausau
+
+
+//font import
+
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One|Montserrat|Roboto+Condensed')
+
+// Global Styles
+
+body
+  font-family: 'Roboto Condensed', sans-serif
+  background-color: #072836
+  color: white
+  padding: 0
+  margin: 0
+  text-align: center
+  +desktop()
+    display: none
+
+h1
+  color: $cyan
+  font-family: $ff
+  font-size: 80px
+a
+  text-decoration: none
+  color: inherit
+.work-btn
+  border: 2px solid $cyan
+  padding: 15px
+  padding-left: 25px
+  padding-right: 25px
