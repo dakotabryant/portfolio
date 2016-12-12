@@ -3,18 +3,52 @@
   text-transform: uppercase; }
 
 header {
-  position: absolute;
-  top: 0;
+  position: fixed;
+  width: 100%;
   display: flex;
-  align-items: center;
   justify-content: space-around;
-  width: 100%; }
+  align-items: center;
+  background-color: #072836; }
+  header .main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #072836;
+    transform: translateY(-100%);
+    transition: transform 0.6s ease; }
+    header .main-nav ul {
+      font-size: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%; }
+      header .main-nav ul li {
+        padding: 15px;
+        width: 100%; }
+  header .main-nav.open {
+    transform: translateY(0); }
+    header .main-nav.open ul {
+      padding: 0; }
   header h2 {
     font-size: 20px;
-    font-weight: lighter; }
+    font-weight: lighter;
+    z-index: 2; }
   header .fa {
     color: #66fcf1;
-    font-size: 26px; }
+    font-size: 26px;
+    cursor: pointer;
+    z-index: 2; }
+
+.copy {
+  margin: 25px auto;
+  font-size: 18px;
+  line-height: 1.5; }
+
+ul {
+  list-style: none; }
 
 .hello {
   min-height: 100vh;
@@ -50,10 +84,6 @@ header {
     color: #ffcc00; }
   .flag .work-btn {
     border-color: #ffcc00; }
-  .flag p {
-    margin: 25px auto;
-    font-size: 18px;
-    line-height: 1.5; }
 
 .hilti {
   min-height: 100vh;
