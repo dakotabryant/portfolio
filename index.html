@@ -50,43 +50,77 @@
         <!-- Hamburger menu goes here for mobile -->
         <i class="fa fa-bars nav-toggle" aria-hidden="true"></i>
         <h2>Dakota Bryant</h2>
-        <i class="fa fa-share-alt" aria-hidden="true"></i>
-        <nav class="main-nav"><ul>
-          <li><a href="#">Tulsa Flag</a></li>
-          <li><a href="#">Hilti</a></li>
-          <li><a href="#">Wausau Window</a></li>
-        </ul></nav>
+        <i class="fa fa-envelope contact-toggle" aria-hidden="true"></i>
+        <nav class="main-nav uppercase">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#">Hilti</a></li>
+                <li><a href="#">Tulsa Flag</a></li>
+                <li><a href="#">Wausau Window</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="contact">
+          <div class="contact-inner">
+
+          <i class="fa fa-mobile"></i>
+          <a href="tel:970-712-7288">970.712.7288</a>
+        </div>
+          <div class="contact-inner">
+
+          <i class="fa fa-mobile"></i>
+          <a href="tel:970-712-7288">970.712.7288</a>
+        </div>
+          <div class="contact-inner">
+
+          <i class="fa fa-mobile"></i>
+          <a href="tel:970-712-7288">970.712.7288</a>
+        </div>
+          <div class="contact-inner">
+
+          <i class="fa fa-mobile"></i>
+          <a href="tel:970-712-7288">970.712.7288</a>
+        </div>
+
+
+        </div>
+        <div class="spinner" id="spinner">
+            <img src="../assets/loader.gif" alt="" id="img-spinner">
+        </div>
     </header>
 
     <section class="hello">
 
         <h1 class="uppercase">Hello</h1>
-        <p>A superb nerd-of-paradise. Creative, functional and alluring. </p>
-        <a data-scroll href="#flag">
+        <p>A superb nerd-of-paradise. Creative, functional and strategic. </p>
+        <a data-scroll href="#hilti">
             <div class="work-btn uppercase">
                 See my work
             </div>
         </a>
 
     </section>
+    <section class="hilti" id="hilti">
+        <h1 class="uppercase">Hilti</h1>
+        <p class="copy">Under <a href="http://gitwit.com">Gitwit Creative</a>, I worked with a team of designers, developers, and strategists to present Hilti's new Ultimate Class cordless tools to their global markets. Utilizing a custom PHP CMS, we were able to deliver this to over 30 markets that required custom translations for each. </p>
+
+        <div class="work-btn uppercase">
+            See the story
+        </div>
+    </section>
     <section class="flag" id="flag">
         <h1 class="uppercase">Tulsa Flag</h1>
         <p class="copy">Working exclusively with <a href="http://gitwit.com/">Gitwit Creative</a> I created and deployed a campaign to re-design Tulsa's city flag. We set out to establish the key shapers of Tulsa's history, and drove an input campaign that captured each
             Tulsan's feedback. </p>
 
-        <a href="http://tulsaflag.com"><div class="work-btn uppercase">
-            See the site
-        </div></a>
+        <a href="http://tulsaflag.com">
+            <div class="work-btn uppercase">
+                See the site
+            </div>
+        </a>
     </section>
-    <section class="hilti">
-        <h1 class="uppercase">Hilti</h1>
-        <p class="copy">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-            irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-        <div class="work-btn uppercase">
-            I suck at writing copy
-        </div>
-    </section>
     <section class="wausau">
         <h1 class="uppercase">Wausau</h1>
         <p class="copy">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
@@ -96,6 +130,7 @@
             I suck at writing copy
         </div>
     </section>
+
     <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js">
     </script>
     <script type="text/javascript" src="scripts/main.js">

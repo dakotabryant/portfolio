@@ -9,7 +9,7 @@ header {
   justify-content: space-around;
   align-items: center;
   background-color: #072836; }
-  header .main-nav {
+  header .main-nav, header .contact {
     position: fixed;
     top: 0;
     left: 0;
@@ -18,20 +18,38 @@ header {
     background-color: #072836;
     transform: translateY(-100%);
     transition: transform 0.6s ease; }
-    header .main-nav ul {
+    header .main-nav ul, header .contact ul {
       font-size: 30px;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      height: 100%; }
-      header .main-nav ul li {
-        padding: 15px;
-        width: 100%; }
+      height: 100%;
+      padding: 0; }
+      header .main-nav ul li, header .contact ul li {
+        padding: 10px;
+        width: 100%;
+        font-family: "ff-good-headline-web-pro-con";
+        font-weight: 800;
+        letter-spacing: 2px; }
+        header .main-nav ul li:hover, header .contact ul li:hover {
+          color: #66fcf1; }
+  header .contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    header .contact .contact-inner {
+      margin-top: 25px;
+      margin-bottom: 25px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 75%; }
   header .main-nav.open {
     transform: translateY(0); }
-    header .main-nav.open ul {
-      padding: 0; }
+  header .contact.open {
+    transform: translateY(0); }
   header h2 {
     font-size: 20px;
     font-weight: lighter;
@@ -41,6 +59,26 @@ header {
     font-size: 26px;
     cursor: pointer;
     z-index: 2; }
+  header .fa-envelope {
+    font-size: 22px; }
+
+.about {
+  min-height: 100vh;
+  padding-top: 50px;
+  padding-left: 25px;
+  padding-right: 25px;
+  background-image: url(../assets/main-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .about h1 {
+    margin: 0 auto;
+    font-size: 100px; }
+  .about p {
+    margin: 25px auto; }
 
 .copy {
   margin: 25px auto;
@@ -49,6 +87,15 @@ header {
 
 ul {
   list-style: none; }
+
+.spinner {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  z-index: 100000;
+  overflow: auto; }
 
 .hello {
   min-height: 100vh;

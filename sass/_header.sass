@@ -5,7 +5,7 @@ header
   justify-content: space-around
   align-items: center
   background-color: $blue
-  .main-nav
+  .main-nav, .contact
     position: fixed
     top: 0
     left: 0
@@ -21,13 +21,32 @@ header
       justify-content: center
       align-items: center
       height: 100%
+      padding: 0
       li
-        padding: 15px
+        padding: 10px
         width: 100%
+        font-family: $ff
+        font-weight: 800
+        letter-spacing: 2px
+        &:hover
+          color: $cyan
+  .contact
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    .contact-inner
+      margin-top: 25px
+      margin-bottom: 25px
+      display: flex
+      justify-content: space-around
+      align-items: center
+      width: 75%
   .main-nav.open
     transform: translateY(0)
-    ul
-      padding: 0
+  .contact.open
+    transform: translateY(0)
+
 
   h2
     font-size: 20px
@@ -38,3 +57,5 @@ header
     font-size: 26px
     cursor: pointer
     z-index: 2
+  .fa-envelope
+    font-size: 22px
