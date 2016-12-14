@@ -5,14 +5,9 @@ $(document).ready(function() {
 	$('.contact-toggle').on('click', function() {
 		$('.contact').toggleClass('open');
 	});
-	$('#spinner').bind('ajxSend', function() {
-			$(this).show();
-	}).bind('ajaxStop', function() {
-		$(this).hide();
-	}).bind('ajaxError', function() {
-		$(this).hide();
-
-	});
-
+	$(window).on('load', function() {
+			// Animate loader off screen
+			$(".loader").delay(1500).fadeOut("slow");
+		});
 
 });
