@@ -1,11 +1,19 @@
+*
+  transition: ease-in-out .2s
 =desktop()
-  @media screen and (min-width: 1413px)
+  @media screen and (min-width: 990px)
+    @content
+=ultra()
+  @media screen and (min-width: 1921px)
     @content
 =mobile()
   @media screen and (max-width: 989px)
     @content
 =laptop()
-  @media screen and (max-width: 1412px)
+  @media screen and (min-width: 990px) and (max-width: 1412px)
+    @content
+=tablet()
+  @media screen and (max-width: 990px) and (min-width: 550px)
     @content
 
 // Color Variables
@@ -22,6 +30,7 @@ $hilti-red: #df001b
 $hilti-gray: #c9cfd3
 $wausau-blue: #e4edf0
 $wausau-red: #a80432
+$gitwit-green: #79eb69
 
 
 
@@ -38,6 +47,7 @@ $ff: 'ff-good-headline-web-pro-con'
 @import about
 @import base
 @import hello
+@import gitwit
 @import flag
 @import hilti
 @import wausau
@@ -46,6 +56,10 @@ $ff: 'ff-good-headline-web-pro-con'
 //font import
 
 @import url('https://fonts.googleapis.com/css?family=Fjalla+One|Montserrat|Roboto+Condensed')
+
+@font-face
+  font-family: 'BTC'
+  src: url('assets/brushtip-C TRIAL/BTCTRIAL.ttf')
 
 // Global Styles
 
@@ -56,11 +70,12 @@ body
   padding: 0
   margin: 0
   text-align: center
-
+  box-sizing: border-box
 h1
   color: $cyan
-  font-family: $ff
+  font-family: $ff, sans-serif
   font-size: 80px
+  line-height: 1
 a
   text-decoration: none
   color: inherit
@@ -69,4 +84,11 @@ a
   padding: 15px
   padding-left: 25px
   padding-right: 25px
-  background-color:
+.work-btn:nth-of-type(1)
+  margin-bottom: 25px
+h5
+  margin: 0
+  margin-bottom: 25px
+.content-wrapper
+  +desktop()
+    padding-left: 190px
