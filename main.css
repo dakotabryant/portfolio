@@ -160,18 +160,18 @@ ul {
   flex-direction: column;
   justify-content: center;
   align-items: center; }
-  .hello h1 {
+  .hello .h1 {
     margin: 0 auto;
     font-size: 56px; }
     @media screen and (min-width: 990px) {
-      .hello h1 {
+      .hello .h1 {
         font-size: 100px; } }
   .hello p {
     margin: 25px auto; }
     @media screen and (min-width: 990px) {
       .hello p {
         font-size: 26px;
-        width: 40%; } }
+        width: 22%; } }
   .hello p:nth-of-type(2) {
     color: #66fcf1;
     margin-top: 0; }
@@ -183,7 +183,7 @@ ul {
   padding-left: 25px;
   padding-right: 25px;
   background-color: #c9cfd3;
-  background-image: url("assets/hilti-bg.jpg");
+  background-image: url("assets/gitwit-bg.jpg");
   background-size: cover;
   background-position: center; }
   .gitwit .content-wrapper {
@@ -213,12 +213,12 @@ ul {
           display: none; } }
       .gitwit .content-wrapper .img-wrapper video {
         width: 100%; }
-    .gitwit .content-wrapper h1 {
+    .gitwit .content-wrapper .h1 {
       margin: 0 auto;
       line-height: .75;
       color: #79eb69; }
       @media screen and (min-width: 990px) {
-        .gitwit .content-wrapper h1 {
+        .gitwit .content-wrapper .h1 {
           margin-left: 0; } }
     .gitwit .content-wrapper .work-btn {
       border-color: #79eb69;
@@ -256,12 +256,12 @@ ul {
           display: none; } }
       .flag .content-wrapper .img-wrapper video {
         width: 100%; }
-  .flag h1 {
+  .flag .h1 {
     margin: 0 auto;
     line-height: .75;
     color: #ffcc00; }
     @media screen and (min-width: 990px) {
-      .flag h1 {
+      .flag .h1 {
         margin-left: 0; } }
   .flag .work-btn {
     border-color: #ffcc00;
@@ -301,12 +301,12 @@ ul {
           display: none; } }
       .hilti .content-wrapper .img-wrapper video {
         width: 100%; }
-    .hilti .content-wrapper h1 {
+    .hilti .content-wrapper .h1 {
       margin: 0 auto;
       line-height: .75;
       color: #df001b; }
       @media screen and (min-width: 990px) {
-        .hilti .content-wrapper h1 {
+        .hilti .content-wrapper .h1 {
           margin-left: 0; } }
     .hilti .content-wrapper .work-btn {
       border-color: #df001b;
@@ -373,7 +373,7 @@ body {
   text-align: center;
   box-sizing: border-box; }
 
-h1 {
+.h1 {
   color: #66fcf1;
   font-family: "ff-good-headline-web-pro-con", sans-serif;
   font-size: 80px;
