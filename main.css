@@ -346,12 +346,12 @@ ul {
           display: none; } }
       .wausau .content-wrapper .img-wrapper video {
         width: 100%; }
-  .wausau h1 {
+  .wausau .h1 {
     margin: 0 auto;
     line-height: .75;
     color: #a80432; }
     @media screen and (min-width: 990px) {
-      .wausau h1 {
+      .wausau .h1 {
         margin-left: 0; } }
   .wausau .work-btn {
     border-color: #a80432;
@@ -359,6 +359,18 @@ ul {
     display: inline-block; }
   .wausau p {
     margin: 25px auto; }
+
+footer {
+  height: 50vh;
+  display: flex; }
+  footer .half {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  footer .left {
+    background-image: url(../assets/main-bg.jpg);
+    background-size: cover; }
 
 @font-face {
   font-family: 'BTC';
