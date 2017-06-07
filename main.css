@@ -15,12 +15,9 @@ header {
   @media screen and (min-width: 990px) {
     header {
       flex-direction: column;
-      width: 190px;
-      height: 190px;
-      top: 40%; }
-      header:hover {
-        height: 100%;
-        top: 0; } }
+      width: 120px;
+      height: 100%;
+      top: 0; } }
   header .main-nav, header .contact {
     position: fixed;
     top: 0;
@@ -80,9 +77,8 @@ header {
     margin: 10px 0; }
     @media screen and (min-width: 990px) {
       header img {
-        width: 125px;
-        margin: 0;
-        opacity: 0; } }
+        width: 90px;
+        margin: 0; } }
   header .writing {
     z-index: 3; }
   header .fa {
@@ -109,10 +105,6 @@ header {
   height: 100%;
   z-index: 999999;
   background: url("assets/loader.gif") center no-repeat #072836; }
-
-#a:hover #b {
-  opacity: 1;
-  transition: ease-in-out .2s; }
 
 .about {
   min-height: 100vh;
@@ -361,16 +353,32 @@ ul {
     margin: 25px auto; }
 
 footer {
-  height: 50vh;
-  display: flex; }
-  footer .half {
-    width: 50%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-image: url(../assets/main-bg.jpg);
+  background-size: cover; }
+  footer h3 {
+    font-size: 42px; }
+    footer h3 span {
+      color: #66fcf1; }
+  footer .contact-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center; }
-  footer .left {
-    background-image: url(../assets/main-bg.jpg);
-    background-size: cover; }
+    width: 550px; }
+    footer .contact-container a {
+      width: 50%;
+      font-size: 22px;
+      margin: 15px auto; }
+      footer .contact-container a i {
+        font-size: 32px;
+        margin-right: 15px; }
+  @media screen and (max-width: 989px) {
+    footer {
+      flex-direction: column; } }
 
 @font-face {
   font-family: 'BTC';
@@ -410,4 +418,4 @@ h5 {
 
 @media screen and (min-width: 990px) {
   .content-wrapper {
-    padding-left: 190px; } }
+    padding-left: 120px; } }
