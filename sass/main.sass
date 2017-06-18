@@ -1,19 +1,19 @@
 *
   transition: ease-in-out .2s
 =desktop()
-  @media screen and (min-width: 990px)
+  @media screen and (min-width: 951px)
     @content
 =ultra()
   @media screen and (min-width: 1921px)
     @content
 =mobile()
-  @media screen and (max-width: 989px)
+  @media screen and (max-width: 950px)
     @content
 =laptop()
-  @media screen and (min-width: 990px) and (max-width: 1412px)
+  @media screen and (min-width: 951px) and (max-width: 1412px)
     @content
 =tablet()
-  @media screen and (max-width: 990px) and (min-width: 550px)
+  @media screen and (max-width: 951px) and (min-width: 550px)
     @content
 
 // Color Variables
@@ -51,6 +51,7 @@ $ff: 'ff-good-headline-web-pro-con'
 @import flag
 @import hilti
 @import wausau
+@import footer
 
 
 //font import
@@ -91,4 +92,4 @@ h5
   margin-bottom: 25px
 .content-wrapper
   +desktop()
-    padding-left: 190px
+    padding-left: 120px

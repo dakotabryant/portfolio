@@ -2,26 +2,101 @@
   min-height: 100vh
   padding-left: 25px
   padding-right: 25px
-  background-image: url(../assets/main-bg.jpg)
-  background-size: cover
-  background-position: center
   display: flex
   flex-direction: column
   justify-content: center
-  align-items: center
-  .h1
-    margin: 0 auto
-    font-size: 56px
+  background-color: $hilti-gray
+  background-image: url(../assets/main-bg.jpg)
+  background-size: cover
+  background-position: center
+  +mobile()
+    height: 100% !important
+    padding-top: 90px
+    padding-bottom: 45px
+  .content-wrapper
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
     +desktop()
-      font-size: 100px
+        text-align: left
+        align-items: center
+        flex-direction: row
+        padding-left: 120px
 
-  p
-    margin: 25px auto
-    +desktop()
-      font-size: 26px
-      width: 22%
-  p:nth-of-type(2)
-    color: $cyan
-    margin-top: 0
-    +desktop()
-      font-size: 18px
+    .text-wrapper
+      width: 100%
+      +desktop()
+        width: 40%
+        display: flex
+        flex-direction: column
+      .work-btn
+        display: inline-block
+    .img-wrapper
+      display: flex
+      flex-direction: column
+      align-items: center
+      flex-wrap: wrap
+      justify-content: center
+      width: 50%
+      margin-left: 5%
+      +mobile()
+        margin-left: 0
+        width: 100%
+      +tablet()
+        display: flex
+        justify-content: space-around
+        margin-left: 0
+      h3
+        margin-right: auto
+      .row
+        width: 70%
+        display: flex
+        justify-content: space-around
+        +mobile()
+          margin: 0
+        img
+          min-width: 75px
+          max-height: 75px
+          margin: 15px
+          +mobile()
+            min-width: 40px
+            max-height: 40px
+          +laptop()
+            margin-left: 15px
+    .h1
+      margin: 0 auto
+      line-height: .75
+      color: $cyan
+      +desktop()
+        margin-left: 0
+      +mobile()
+        font-size: 56px
+    .work-btn
+      border-color: $cyan
+      margin: 0
+
+    p
+      margin: 25px auto
+      +mobile()
+        width: 100%
+        margin-bottom: 0
+        font-size: 16px
+      span
+        color: $cyan
+      .second
+        color: white
+        +mobile()
+          display: none
+    .button-containers
+      width: 500px
+      +mobile()
+        width: 100%
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+      div
+        margin-right: 25px
+        +mobile()
+          margin: 15px 0
