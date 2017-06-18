@@ -9,6 +9,10 @@
   background-image: url(../assets/main-bg.jpg)
   background-size: cover
   background-position: center
+  +mobile()
+    height: 100% !important
+    padding-top: 90px
+    padding-bottom: 45px
   .content-wrapper
     display: flex
     flex-direction: column
@@ -37,22 +41,27 @@
       width: 50%
       margin-left: 5%
       +mobile()
-        display: none
+        margin-left: 0
+        width: 100%
       +tablet()
         display: flex
         justify-content: space-around
-        width: 100%
         margin-left: 0
       h3
         margin-right: auto
       .row
         width: 70%
-        margin: 25px 25px
         display: flex
         justify-content: space-around
+        +mobile()
+          margin: 0
         img
           min-width: 75px
           max-height: 75px
+          margin: 15px
+          +mobile()
+            min-width: 40px
+            max-height: 40px
           +laptop()
             margin-left: 15px
     .h1
