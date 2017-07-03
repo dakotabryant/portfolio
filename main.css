@@ -256,8 +256,10 @@ ul {
             @media screen and (max-width: 950px) {
               .hello .content-wrapper .img-wrapper .row .img-container p {
                 font-size: 12px;
+                margin-bottom: 10px;
                 font-weight: normal;
-                letter-spacing: normal; } }
+                letter-spacing: normal;
+                border: none; } }
     .hello .content-wrapper .h1 {
       margin: 0 auto;
       line-height: .75;
