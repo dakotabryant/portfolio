@@ -9,6 +9,7 @@ header {
   position: fixed;
   width: 100%;
   display: flex;
+  display: none;
   justify-content: space-around;
   align-items: center;
   background-color: #072836; }
@@ -161,7 +162,7 @@ ul {
   @media screen and (max-width: 950px) {
     .hello {
       height: 100% !important;
-      padding-top: 90px;
+      padding-top: 45px;
       padding-bottom: 45px; } }
   .hello .content-wrapper {
     display: flex;
@@ -172,8 +173,7 @@ ul {
       .hello .content-wrapper {
         text-align: left;
         align-items: center;
-        flex-direction: row;
-        padding-left: 120px; } }
+        flex-direction: row; } }
     .hello .content-wrapper .text-wrapper {
       width: 100%; }
       @media screen and (min-width: 951px) {
@@ -205,21 +205,59 @@ ul {
       .hello .content-wrapper .img-wrapper .row {
         width: 70%;
         display: flex;
-        justify-content: space-around; }
+        justify-content: space-around;
+        align-items: baseline; }
+        @media screen and (min-width: 951px) and (max-width: 1412px) {
+          .hello .content-wrapper .img-wrapper .row {
+            width: 90%; } }
         @media screen and (max-width: 950px) {
           .hello .content-wrapper .img-wrapper .row {
-            margin: 0; } }
-        .hello .content-wrapper .img-wrapper .row img {
-          min-width: 75px;
-          max-height: 75px;
-          margin: 15px; }
+            margin: 0;
+            width: 100%; } }
+        .hello .content-wrapper .img-wrapper .row .img-container {
+          width: 75px;
+          height: 75px;
+          margin: 15px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          padding-top: 25px;
+          margin-bottom: 25px; }
           @media screen and (max-width: 950px) {
-            .hello .content-wrapper .img-wrapper .row img {
-              min-width: 40px;
-              max-height: 40px; } }
+            .hello .content-wrapper .img-wrapper .row .img-container {
+              min-width: 50px;
+              max-height: 50px; } }
           @media screen and (min-width: 951px) and (max-width: 1412px) {
-            .hello .content-wrapper .img-wrapper .row img {
+            .hello .content-wrapper .img-wrapper .row .img-container {
               margin-left: 15px; } }
+          @media screen and (max-width: 951px) and (min-width: 550px) {
+            .hello .content-wrapper .img-wrapper .row .img-container {
+              padding-bottom: 25px; } }
+          .hello .content-wrapper .img-wrapper .row .img-container img {
+            width: 75px; }
+            @media screen and (min-width: 951px) and (max-width: 1412px) {
+              .hello .content-wrapper .img-wrapper .row .img-container img {
+                width: 60px; } }
+            @media screen and (max-width: 950px) {
+              .hello .content-wrapper .img-wrapper .row .img-container img {
+                width: 100%; } }
+          .hello .content-wrapper .img-wrapper .row .img-container p {
+            margin: 0;
+            margin-bottom: 15px;
+            padding: 8px;
+            cursor: default;
+            font-weight: bold;
+            letter-spacing: 1.2px;
+            border: 2px solid #66fcf1;
+            border-radius: 4px;
+            width: 100%;
+            text-align: center; }
+            @media screen and (max-width: 950px) {
+              .hello .content-wrapper .img-wrapper .row .img-container p {
+                font-size: 12px;
+                font-weight: normal;
+                letter-spacing: normal; } }
     .hello .content-wrapper .h1 {
       margin: 0 auto;
       line-height: .75;
@@ -232,7 +270,14 @@ ul {
           font-size: 56px; } }
     .hello .content-wrapper .work-btn {
       border-color: #66fcf1;
-      margin: 0; }
+      margin: 0;
+      background-image: linear-gradient(to left, transparent, transparent 50%, #66fcf1 50%, #66fcf1);
+      background-position: 100% 0;
+      background-size: 200% 100%;
+      box-sizing: border-box; }
+      .hello .content-wrapper .work-btn:hover {
+        background-position: 0 0;
+        color: black; }
     .hello .content-wrapper p {
       margin: 25px auto; }
       @media screen and (max-width: 950px) {
@@ -305,7 +350,14 @@ ul {
           margin-left: 0; } }
     .gitwit .content-wrapper .work-btn {
       border-color: #79eb69;
-      margin: 0; }
+      margin: 0;
+      background-image: linear-gradient(to left, transparent, transparent 50%, #79eb69 50%, #79eb69);
+      background-position: 100% 0;
+      background-size: 200% 100%;
+      box-sizing: border-box; }
+      .gitwit .content-wrapper .work-btn:hover {
+        background-position: 0 0;
+        color: black; }
     .gitwit .content-wrapper p {
       margin: 25px auto; }
 
@@ -348,7 +400,14 @@ ul {
         margin-left: 0; } }
   .flag .work-btn {
     border-color: #ffcc00;
-    display: inline-block; }
+    display: inline-block;
+    background-image: linear-gradient(to left, transparent, transparent 50%, #ffcc00 50%, #ffcc00);
+    background-position: 100% 0;
+    background-size: 200% 100%;
+    box-sizing: border-box; }
+    .flag .work-btn:hover {
+      background-position: 0 0;
+      color: black; }
 
 .hilti {
   padding-left: 25px;
@@ -393,7 +452,14 @@ ul {
           margin-left: 0; } }
     .hilti .content-wrapper .work-btn {
       border-color: #df001b;
-      margin: 0; }
+      margin: 0;
+      background-image: linear-gradient(to left, transparent, transparent 50%, #df001b 50%, #df001b);
+      background-position: 100% 0;
+      background-size: 200% 100%;
+      box-sizing: border-box; }
+      .hilti .content-wrapper .work-btn:hover {
+        background-position: 0 0;
+        color: white; }
     .hilti .content-wrapper p {
       margin: 25px auto; }
 
@@ -439,7 +505,14 @@ ul {
   .wausau .work-btn {
     border-color: #a80432;
     margin: 0;
-    display: inline-block; }
+    display: inline-block;
+    background-image: linear-gradient(to left, transparent, transparent 50%, #a80432 50%, #a80432);
+    background-position: 100% 0;
+    background-size: 200% 100%;
+    box-sizing: border-box; }
+    .wausau .work-btn:hover {
+      background-position: 0 0;
+      color: white; }
   .wausau p {
     margin: 25px auto; }
 
@@ -457,7 +530,9 @@ footer {
   @media screen and (max-width: 950px) {
     footer {
       flex-direction: column;
-      height: 100%; } }
+      height: 100%;
+      padding-top: 45px;
+      padding-bottom: 45px; } }
   footer h3 {
     font-size: 32px;
     font-weight: lighter; }
@@ -521,7 +596,3 @@ a {
 h5 {
   margin: 0;
   margin-bottom: 25px; }
-
-@media screen and (min-width: 951px) {
-  .content-wrapper {
-    padding-left: 120px; } }

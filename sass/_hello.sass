@@ -11,7 +11,7 @@
   background-position: center
   +mobile()
     height: 100% !important
-    padding-top: 90px
+    padding-top: 45px
     padding-bottom: 45px
   .content-wrapper
     display: flex
@@ -22,7 +22,6 @@
         text-align: left
         align-items: center
         flex-direction: row
-        padding-left: 120px
 
     .text-wrapper
       width: 100%
@@ -53,17 +52,51 @@
         width: 70%
         display: flex
         justify-content: space-around
+        align-items: baseline
+        +laptop()
+          width: 90%
         +mobile()
           margin: 0
-        img
-          min-width: 75px
-          max-height: 75px
+          width: 100%
+        .img-container
+          width: 75px
+          height: 75px
           margin: 15px
+          display: flex
+          flex-direction: column
+          align-items: center
+          justify-content: center
+          padding-top: 25px
+          margin-bottom: 25px
           +mobile()
-            min-width: 40px
-            max-height: 40px
+            min-width: 50px
+            max-height: 50px
           +laptop()
             margin-left: 15px
+          +tablet()
+            padding-bottom: 25px
+
+          img
+            width: 75px
+            +laptop()
+              width: 60px
+            +mobile()
+              width: 100%
+          p
+            margin: 0
+            margin-bottom: 15px
+            padding: 8px
+            cursor: default
+            font-weight: bold
+            letter-spacing: 1.2px
+            border: 2px solid $cyan
+            border-radius: 4px
+            width: 100%
+            text-align: center
+            +mobile()
+              font-size: 12px
+              font-weight: normal
+              letter-spacing: normal
     .h1
       margin: 0 auto
       line-height: .75
@@ -75,6 +108,14 @@
     .work-btn
       border-color: $cyan
       margin: 0
+      background-image: linear-gradient(to left, transparent, transparent 50%, $cyan 50%, $cyan)
+      background-position: 100% 0
+      background-size: 200% 100%
+      box-sizing: border-box
+      &:hover
+        background-position: 0 0
+        color: black
+
 
     p
       margin: 25px auto

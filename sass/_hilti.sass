@@ -40,6 +40,13 @@
     .work-btn
       border-color: $hilti-red
       margin: 0
+      background-image: linear-gradient(to left, transparent, transparent 50%, $hilti-red 50%, $hilti-red)
+      background-position: 100% 0
+      background-size: 200% 100%
+      box-sizing: border-box
+      &:hover
+        background-position: 0 0
+        color: white
 
     p
       margin: 25px auto
