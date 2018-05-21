@@ -1,31 +1,25 @@
 {
-  "name": "dakota_portfolio",
+  "name": "gatsby-starter-default",
+  "description": "Gatsby default starter",
   "version": "1.0.0",
-  "description": "",
-  "main": "gulpfile.js",
+  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "dependencies": {
+    "gatsby": "^1.9.247",
+    "gatsby-link": "^1.6.40",
+    "gatsby-plugin-react-helmet": "^2.0.10",
+    "react-helmet": "^5.2.0"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
   "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write 'src/**/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dakotabryant/portfolio"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/GitwitCreative/SR_WEB/issues"
-  },
-  "homepage": "https://github.com/GitwitCreative/SR_WEB#readme",
   "devDependencies": {
-    "browser-sync": "^2.18.12",
-    "font-awesome": "^4.7.0",
-    "gulp": "^3.9.1",
-    "gulp-sass": "^3.1.0",
-    "jquery": "^3.1.1",
-    "normalize.css": "^5.0.0"
-  },
-  "dependencies": {
-    "gulp-minify": "^2.1.0",
-    "node-sass": "^4.5.3"
+    "prettier": "^1.12.0"
   }
 }
