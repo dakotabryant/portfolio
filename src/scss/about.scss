@@ -1,0 +1,17 @@
+.about {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+  img {
+    max-width: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  p {
+    max-width: 25%;
+    text-align: center;
+  }
+}

@@ -4,6 +4,7 @@ import Helmet from 'react-helmet';
 import NavLinks from '../content/navLinks';
 
 import Header from '../components/header';
+import Footer from '../components/Footer';
 import './index.css';
 
 const Layout = ({ children, data }) => (
@@ -23,6 +24,7 @@ const Layout = ({ children, data }) => (
     />
     <Header siteTitle={data.site.siteMetadata.title} navLinks={NavLinks} />
     <div>{children()}</div>
+    <Footer />
   </div>
 );
 
