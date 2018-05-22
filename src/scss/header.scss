@@ -1,8 +1,17 @@
 .header {
+  padding: 0 50px;
+  padding-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
   .logo {
-    position: fixed;
-    top: 25px;
-    left: 25px;
     max-width: 75px;
+  }
+  .nav-links {
+    a {
+      color: white;
+    }
   }
 }
