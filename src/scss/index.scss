@@ -16,7 +16,18 @@ body {
 a {
   text-decoration: none;
 }
+.title-image {
+  max-width: 200px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.section {
+  position: relative;
+  min-height: 350px;
+}
 
 @import 'header.scss';
 @import 'hero.scss';
 @import 'about.scss';
+@import 'footer.scss';

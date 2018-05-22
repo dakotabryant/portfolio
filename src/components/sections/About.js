@@ -3,8 +3,8 @@ import AboutImage from '../../assets/titles/about-title.svg';
 
 const About = ({aboutText}) => {
   return (
-    <div className="about">
-      <img src={AboutImage} alt="About"/>
+    <div className="about section">
+      <img className="title-image" src={AboutImage} alt="About"/>
       <p>{aboutText}</p>
     </div>
   );
