@@ -8,6 +8,10 @@ import Skills from '../components/sections/Skills';
 import Contact from '../components/sections/Contact';
 import { aboutText } from '../content/copy';
 
+console.log('====================================');
+console.log(React);
+console.log('====================================');
+
 const IndexPage = () => (
   <div>
     <Hero />
