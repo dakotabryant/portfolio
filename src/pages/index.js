@@ -1,25 +1,22 @@
 import React from 'react';
-import Link from 'gatsby-link';
 import '../scss/index.scss';
+// import { Link } from 'gatsby';
 import Hero from '../components/sections/Hero';
 import About from '../components/sections/About';
 import Work from '../components/sections/Work';
 import Skills from '../components/sections/Skills';
 import Contact from '../components/sections/Contact';
 import { aboutText } from '../content/copy';
-
-console.log('====================================');
-console.log(React);
-console.log('====================================');
+import Layout from '../components/layout';
 
 const IndexPage = () => (
-  <div>
+  <Layout>
     <Hero />
     <About aboutText={aboutText} />
     <Work />
     <Skills />
     <Contact />
-  </div>
+  </Layout>
 );
 
 export default IndexPage;

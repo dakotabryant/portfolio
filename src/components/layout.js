@@ -5,12 +5,12 @@ import NavLinks from '../content/navLinks';
 
 import Header from '../components/header';
 import Footer from '../components/Footer';
-import './index.css';
+import '../layouts/index.css';
 
-const Layout = ({ children, data }) => (
+const Layout = ({ children }) => (
   <div>
     <Helmet
-      title={data.site.siteMetadata.title}
+      title="Dakota Bryant - Javascript Engineer"
       meta={[
         {
           name: 'description',
@@ -22,14 +22,14 @@ const Layout = ({ children, data }) => (
         },
       ]}
     />
-    <Header siteTitle={data.site.siteMetadata.title} navLinks={NavLinks} />
-    <div>{children()}</div>
+    <Header siteTitle="Dakota Bryant - Javascript Engineer" navLinks={NavLinks} />
+    <div>{children}</div>
     <Footer />
   </div>
 );
 
 Layout.propTypes = {
-  children: PropTypes.func,
+  children: PropTypes.array,
 };
 
 export default Layout;

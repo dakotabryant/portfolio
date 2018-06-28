@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'gatsby-link';
+import { Link } from 'gatsby';
 import logo from '../assets/logos/Logo.svg';
 
 const Header = ({ siteTitle, navLinks }) => (
@@ -8,7 +8,11 @@ const Header = ({ siteTitle, navLinks }) => (
     <div className="nav-links">
       {navLinks &&
         navLinks.map(({ text, path }) => {
-          return <Link>{text}</Link>;
+          return (
+            <Link to={path} key={path}>
+              {text}
+            </Link>
+          );
         })}
     </div>
   </div>
