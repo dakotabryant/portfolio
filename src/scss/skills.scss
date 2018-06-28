@@ -1,0 +1,18 @@
+.skills {
+  .skill-icons {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 60%;
+    margin-left: auto;
+    .icon {
+      width: 25%;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: 600;
+      img {
+        height: 150px;
+      }
+    }
+  }
+}

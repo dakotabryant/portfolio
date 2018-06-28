@@ -8,7 +8,7 @@ import Footer from '../components/Footer';
 import '../layouts/index.css';
 
 const Layout = ({ children }) => (
-  <div>
+  <>
     <Helmet
       title="Dakota Bryant - Javascript Engineer"
       meta={[
@@ -22,10 +22,13 @@ const Layout = ({ children }) => (
         },
       ]}
     />
-    <Header siteTitle="Dakota Bryant - Javascript Engineer" navLinks={NavLinks} />
-    <div>{children}</div>
+    <Header
+      siteTitle="Dakota Bryant - Javascript Engineer"
+      navLinks={NavLinks}
+    />
+    {children}
     <Footer />
-  </div>
+  </>
 );
 
 Layout.propTypes = {
