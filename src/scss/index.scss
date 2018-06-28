@@ -57,11 +57,11 @@ button {
 
 @-webkit-keyframes neon1 {
   from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px $pink,
+    text-shadow: 0 0 10px $blue-dark, 0 0 20px $blue-dark, 0 0 30px $blue-dark, 0 0 40px $pink,
       0 0 70px $pink, 0 0 80px $pink, 0 0 100px $pink, 0 0 150px $pink;
   }
   to {
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px $pink,
+    text-shadow: 0 0 5px $blue-dark, 0 0 10px $blue-dark, 0 0 15px $blue-dark, 0 0 20px $pink,
       0 0 35px $pink, 0 0 40px $pink, 0 0 50px $pink, 0 0 75px $pink;
   }
 }
