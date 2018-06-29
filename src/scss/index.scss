@@ -7,7 +7,19 @@
 
 $blue-dark: #121524;
 $pink: #f8228d;
+$pink-hot: #FF00B4;
 
+// helper classes
+.uppercase {
+  text-transform: uppercase;
+}
+// global styles
+.title-image {
+  max-width: 205px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 body {
   padding: 0;
   margin: 0;
@@ -22,17 +34,11 @@ body {
 a {
   text-decoration: none;
 }
-.title-image {
-  max-width: 205px;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
 .section {
   position: relative;
   min-height: 350px;
-  max-width: 1300px;
   margin: 0 auto;
+  padding: 50px 0;
 }
 
 button {
@@ -49,20 +55,28 @@ button {
   letter-spacing: 2px;
   font-size: 16px;
   outline: none;
-  box-shadow: 0 0 15px $pink;
+  box-shadow: 0 0 15px rgba($color: $pink, $alpha: .5);
   -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
   -moz-animation: neon1 1.5s ease-in-out infinite alternate;
   animation: neon1 1.5s ease-in-out infinite alternate;
+  cursor: pointer;
+  transition: ease-in-out 1.5s;
+  &:hover {
+    box-shadow: 0 0 25px rgba($color: $pink-hot, $alpha: 1);
+    transition: ease-in-out 1.5s;
+  }
 }
 
 @-webkit-keyframes neon1 {
   from {
-    text-shadow: 0 0 10px $blue-dark, 0 0 20px $blue-dark, 0 0 30px $blue-dark, 0 0 40px $pink,
-      0 0 70px $pink, 0 0 80px $pink, 0 0 100px $pink, 0 0 150px $pink;
+    text-shadow: 0 0 10px $blue-dark, 0 0 20px $blue-dark, 0 0 30px $blue-dark,
+      0 0 40px $pink, 0 0 70px $pink, 0 0 80px $pink, 0 0 100px $pink,
+      0 0 150px $pink;
   }
   to {
-    text-shadow: 0 0 5px $blue-dark, 0 0 10px $blue-dark, 0 0 15px $blue-dark, 0 0 20px $pink,
-      0 0 35px $pink, 0 0 40px $pink, 0 0 50px $pink, 0 0 75px $pink;
+    text-shadow: 0 0 5px $blue-dark, 0 0 10px $blue-dark, 0 0 15px $blue-dark,
+      0 0 20px $pink, 0 0 35px $pink, 0 0 40px $pink, 0 0 50px $pink,
+      0 0 75px $pink;
   }
 }
 
@@ -71,3 +85,5 @@ button {
 @import 'about.scss';
 @import 'footer.scss';
 @import 'skills.scss';
+@import 'contact.scss';
+@import 'work.scss';

@@ -4,7 +4,7 @@ import AboutImage from '../../assets/titles/about-title.svg';
 const About = ({ aboutText }) => {
   return (
     <div className="about section">
-      <img className="title-image" src={AboutImage} alt="About" />
+      <object className="title-image" data={AboutImage} type="image/svg+xml" />
       <p>{aboutText}</p>
       <button>View My Work</button>
     </div>
