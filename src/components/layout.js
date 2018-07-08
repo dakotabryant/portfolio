@@ -5,10 +5,9 @@ import NavLinks from '../content/navLinks';
 
 import Header from '../components/header';
 import Footer from '../components/Footer';
-import '../layouts/index.css';
 
 const Layout = ({ children }) => (
-  <>
+  <React.Fragment>
     <Helmet
       title="Dakota Bryant - Javascript Engineer"
       meta={[
@@ -28,7 +27,7 @@ const Layout = ({ children }) => (
     />
     {children}
     <Footer />
-  </>
+  </React.Fragment>
 );
 
 Layout.propTypes = {
@@ -37,12 +36,12 @@ Layout.propTypes = {
 
 export default Layout;
 
-export const query = graphql`
-  query SiteTitleQuery {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`;
+// export const query = graphql`
+//   query SiteTitleQuery {
+//     site {
+//       siteMetadata {
+//         title
+//       }
+//     }
+//   }
+// `;

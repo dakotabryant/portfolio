@@ -6,10 +6,20 @@
   background-position: 0 -150px;
   background-repeat: no-repeat;
   display: flex;
-  justify-content: center;
   align-items: center;
+  flex-direction: column;
   object {
     max-width: 65%;
-    margin-bottom: 15%;
+  }
+  .button-wrapper {
+    margin-top: -10%;
+  }
+  .music {
+    font-size: 12px;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    z-index: 1000000;
+    background-color: $blue-dark;
   }
 }

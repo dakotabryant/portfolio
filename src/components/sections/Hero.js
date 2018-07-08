@@ -1,12 +1,22 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Name from '../../assets/titles/db.svg';
 
-const Hero = () => {
-  return (
-    <section className="hero">
-      <object data={Name} type="image/svg+xml"> </object>
-    </section>
-  );
-};
+class Hero extends Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return (
+      <section className="hero">
+        <object data={Name} type="image/svg+xml" />
+        <div className="button-wrapper">
+          <button>Contact</button>
+          <button className="music">Give me the full experience</button>
+        </div>
+      </section>
+    );
+  }
+}
 
 export default Hero;

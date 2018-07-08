@@ -7,7 +7,7 @@
 
 $blue-dark: #121524;
 $pink: #f8228d;
-$pink-hot: #FF00B4;
+$pink-hot: #ff00b4;
 
 // helper classes
 .uppercase {
@@ -15,7 +15,7 @@ $pink-hot: #FF00B4;
 }
 // global styles
 .title-image {
-  max-width: 205px;
+  max-width: 300px;
   position: absolute;
   top: 0;
   left: 0;
@@ -35,10 +35,23 @@ a {
   text-decoration: none;
 }
 .section {
-  position: relative;
   min-height: 350px;
   margin: 0 auto;
   padding: 50px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content-wrapper {
+  position: relative;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.copy-wrapper {
+  text-align: center;
+  width: 50%;
 }
 
 button {
@@ -55,7 +68,7 @@ button {
   letter-spacing: 2px;
   font-size: 16px;
   outline: none;
-  box-shadow: 0 0 15px rgba($color: $pink, $alpha: .5);
+  box-shadow: 0 0 15px rgba($color: $pink, $alpha: 0.5);
   -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
   -moz-animation: neon1 1.5s ease-in-out infinite alternate;
   animation: neon1 1.5s ease-in-out infinite alternate;

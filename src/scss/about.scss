@@ -1,12 +1,12 @@
 .about {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  height: 900px;
+  height: 750px;
+  .title-image {
+    top: -125px;
+    left: -50px;
+  }
   p {
-    max-width: 25%;
     text-align: center;
+    letter-spacing: 2px;
+    line-height: 1.5;
   }
 }
