@@ -1,5 +1,26 @@
 .work {
- background-image: url('../assets/images/work-background.jpg');
- background-size: cover;
- background-repeat: no-repeat;
+  background-image: url('../assets/images/work-background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 750px;
+  position: relative;
+  .tile-wrapper {
+    margin-right: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    min-width: 65%;
+    .tile {
+      height: 200px;
+      width: calc(50% - 50px);
+      margin: 25px;
+      background-size: cover;
+    }
+  }
+  .title-image {
+    top: 0;
+    right: 0;
+    left: initial;
+  }
 }

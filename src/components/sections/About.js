@@ -4,6 +4,9 @@ import AboutImage from '../../assets/titles/about-title.svg';
 const About = ({ aboutText }) => {
   return (
     <div className="about section">
+      {/* <div class="horizontal-line" />
+      <div class="horizontal-line" />
+      <div class="horizontal-line" /> */}
       <div className="content-wrapper">
         <object
           className="title-image"
