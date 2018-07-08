@@ -1,13 +1,8 @@
 .about {
-  height: 750px;
   position: relative;
-  background-image: linear-gradient(
-    to bottom right,
-    $blue-dark,
-    $blue-dark 50%,
-    $blue-dark 50%,
-    $blue-dark
-  );
+  margin-bottom: -150px;
+  padding-top: 150px;
+  z-index: 5000;
   // background-image: url('../assets/textures/stardust.png');
   .title-image {
     top: -125px;
