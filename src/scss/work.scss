@@ -2,7 +2,7 @@
   background-image: url('../assets/images/work-background.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  height: 750px;
+  height: 1900px;
   position: relative;
   .tile-wrapper {
     margin-right: auto;
@@ -16,6 +16,7 @@
       width: calc(50% - 50px);
       margin: 25px;
       background-size: cover;
+      background-position: center;
     }
   }
   .title-image {

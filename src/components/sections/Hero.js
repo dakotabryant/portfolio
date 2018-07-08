@@ -11,7 +11,6 @@ class Hero extends Component {
       <section className="hero">
         <object data={Name} type="image/svg+xml" />
         <div className="button-wrapper">
-          <button>Contact</button>
           <button className="music">Give me the full experience</button>
         </div>
       </section>

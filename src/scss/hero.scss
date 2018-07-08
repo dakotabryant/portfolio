@@ -3,11 +3,12 @@
   height: 100vh;
   background-image: url('../assets/images/header.jpg');
   background-size: cover;
-  background-position: 0 -150px;
+  background-position: bottom;
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
   flex-direction: column;
+  position: relative;
   object {
     max-width: 65%;
   }

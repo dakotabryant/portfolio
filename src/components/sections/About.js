@@ -7,6 +7,9 @@ const About = ({ aboutText }) => {
       {/* <div class="horizontal-line" />
       <div class="horizontal-line" />
       <div class="horizontal-line" /> */}
+      <div className="separator" />
+      <div className="separator reverse" />
+
       <div className="content-wrapper">
         <object
           className="title-image"
