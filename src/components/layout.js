@@ -2,9 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import NavLinks from '../content/navLinks';
-
 import Header from '../components/header';
 import Footer from '../components/Footer';
+import { Provider } from 'react-redux';
+import store from '../store';
 
 const Layout = ({ children }) => (
   <React.Fragment>
@@ -25,7 +26,9 @@ const Layout = ({ children }) => (
       siteTitle="Dakota Bryant - Javascript Engineer"
       navLinks={NavLinks}
     />
-    {children}
+    <Provider store={store}>
+      <React.Fragment>{children}</React.Fragment>
+    </Provider>
     <Footer />
   </React.Fragment>
 );
@@ -35,13 +38,3 @@ Layout.propTypes = {
 };
 
 export default Layout;
-
-// export const query = graphql`
-//   query SiteTitleQuery {
-//     site {
-//       siteMetadata {
-//         title
-//       }
-//     }
-//   }
-// `;

@@ -8,11 +8,17 @@ const Work = () => {
       <div className="separator full" />
       <div className="separator full bottom" />
       <div className="content-wrapper">
-        <object data={WorkTitle} type="image/svg+xml" className="title-image" />
+        <object
+          aria-label="Work"
+          data={WorkTitle}
+          type="image/svg+xml"
+          className="title-image"
+        />
         <div className="tile-wrapper">
           {workTiles.map(site => {
             return (
               <div
+                key={site.hoverText}
                 className="tile"
                 style={{ backgroundImage: `url(${site.image})` }}
               />

@@ -12,6 +12,7 @@ const About = ({ aboutText }) => {
 
       <div className="content-wrapper">
         <object
+          aria-label="About"
           className="title-image"
           data={AboutImage}
           type="image/svg+xml"

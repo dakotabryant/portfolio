@@ -7,6 +7,7 @@ const Skills = () => {
     <div className="section skills">
       <div className="content-wrapper">
         <object
+          aria-label="Skills"
           data={SkillsTitle}
           type="image/svg+xml"
           className="title-image"
@@ -15,7 +16,11 @@ const Skills = () => {
           {skillsIcons.map(icon => {
             return (
               <div className="icon" key={icon.text}>
-                <object data={icon.path} type="image/svg+xml" />
+                <object
+                  aria-label={icon.path}
+                  data={icon.path}
+                  type="image/svg+xml"
+                />
                 <p>{icon.text}</p>
               </div>
             );

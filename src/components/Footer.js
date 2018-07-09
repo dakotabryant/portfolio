@@ -11,7 +11,11 @@ const Footer = () => {
           socialMedia.map(site => {
             return (
               <div key={site.text} className="icon-wrapper">
-                <object data={site.path} type="image/svg+xml" />
+                <object
+                  aria-label={site.path}
+                  data={site.path}
+                  type="image/svg+xml"
+                />
                 <p>{site.text}</p>
               </div>
             );

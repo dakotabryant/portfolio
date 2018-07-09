@@ -12,10 +12,10 @@ export default [
   },
   {
     image: taylor,
-    hoverText: 'Taylor Bryant Portfolio',
+    hoverText: 'Taylor Bryant Portfolios',
   },
   {
     image: taylor,
-    hoverText: 'Taylor Bryant Portfolio',
+    hoverText: 'Taylor Bryant Portfolioz',
   },
 ];
