@@ -8,6 +8,8 @@
 $blue-dark: #121524;
 $pink: #f8228d;
 $pink-hot: #ff00b4;
+$pink-shadow: 0 0 15px rgba($color: $pink, $alpha: 0.5);
+
 
 // helper classes
 .uppercase {
@@ -115,7 +117,7 @@ button {
   letter-spacing: 2px;
   font-size: 16px;
   outline: none;
-  box-shadow: 0 0 15px rgba($color: $pink, $alpha: 0.5);
+  box-shadow: $pink-shadow;
   -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
   -moz-animation: neon1 1.5s ease-in-out infinite alternate;
   animation: neon1 1.5s ease-in-out infinite alternate;
