@@ -1,5 +1,7 @@
 import React from 'react';
 import socialMedia from '../content/social-media';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelopeOpen } from '@fortawesome/free-solid-svg-icons';
 
 const Footer = () => {
   return (
@@ -11,11 +13,7 @@ const Footer = () => {
           socialMedia.map(site => {
             return (
               <div key={site.text} className="icon-wrapper">
-                <object
-                  aria-label={site.path}
-                  data={site.path}
-                  type="image/svg+xml"
-                />
+                <FontAwesomeIcon icon={site.icon} />
                 <p>{site.text}</p>
               </div>
             );
