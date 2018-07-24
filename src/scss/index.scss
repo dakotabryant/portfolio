@@ -73,7 +73,7 @@ body {
 }
 .separator {
   width: 50%;
-  height: 150px;
+  height: 350px;
   background-image: linear-gradient(
     to top right,
     $blue-dark,
@@ -82,8 +82,12 @@ body {
     transparent
   );
   position: absolute;
-  top: -150px;
+  top: -350px;
   left: 0;
+  @include mobile() {
+    height: 150px;
+    top: -150px;
+  }
 }
 .separator.reverse {
   transform: rotate(180deg);
