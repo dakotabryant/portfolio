@@ -1,8 +1,3 @@
-.logo {
-  max-width: 60px;
-  margin-top: 25px;
-  cursor: pointer;
-}
 .sun {
   border-radius: 100%;
   transition: ease-in-out 0.5s;
@@ -27,6 +22,23 @@
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
+  @include mobile() {
+    width: 100%;
+    height: 60px;
+    top: initial;
+    justify-content: space-between;
+    flex-direction: row;
+    padding-left: 15px;
+  }
+  .logo {
+    max-width: 60px;
+    margin-top: 25px;
+    cursor: pointer;
+    @include mobile() {
+      margin-top: 0;
+      max-width: 45px;
+    }
+  }
   // -webkit-box-shadow: -9px 0px 45px 0px rgba($pink, 0.75);
   // -moz-box-shadow: -9px 0px 45px 0px rgba($pink, 0.75);
   // box-shadow: -9px 0px 45px 0px rgba($pink, 0.75);
@@ -40,8 +52,18 @@
     height: 25vh;
     margin: auto 0;
     cursor: pointer;
+    @include mobile() {
+      flex-direction: row;
+      justify-content: flex-end;
+      height: auto;
+      font-size: 12px;
+    }
     div {
       transform: rotate(-90deg);
+      @include mobile() {
+        transform: initial;
+        margin: 0 15px;
+      }
     }
   }
 }
@@ -60,6 +82,9 @@
   box-shadow: $pink-shadow;
   border: 3px solid $pink;
   cursor: pointer;
+  @include mobile() {
+    display: none;
+  }
   .music-icon {
     color: white;
     font-size: 22px;

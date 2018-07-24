@@ -1,5 +1,36 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,800');
 
+@mixin desktop() {
+  @media screen and (min-width: 990px) {
+    @content;
+  }
+}
+@mixin ultra() {
+  @media screen and (min-width: 1921px) {
+    @content;
+  }
+}
+@mixin mobile() {
+  @media screen and (max-width: 989px) {
+    @content;
+  }
+}
+@mixin laptop() {
+  @media screen and (min-width: 990px) and (max-width: 1440px) {
+    @content;
+  }
+}
+@mixin tablet() {
+  @media screen and (max-width: 990px) and (min-width: 550px) {
+    @content;
+  }
+}
+@mixin portrait() {
+  @media screen and (min-height: 1080px) and (max-width: 1440px) {
+    @content;
+  }
+}
+
 * {
   box-sizing: border-box;
   font-family: 'Raleway', sans-serif;
@@ -9,10 +40,12 @@ $blue-dark: #121524;
 $blue-light: #1d2138;
 $pink: #f8228d;
 $pink-hot: #ff00b4;
-$pink-shadow: 0 0 15px rgba($color: $pink, $alpha: 0.5);
+$pink-shadow: 0 0 15px
+  rgba(
+    $color: $pink,
+    $alpha: 0.5,
+  );
 $orange: #ef5a29;
-
-
 // helper classes
 .uppercase {
   text-transform: uppercase;
@@ -100,6 +133,9 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+  @include laptop() {
+    width: 1000px;
+  }
 }
 .copy-wrapper {
   text-align: center;
