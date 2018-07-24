@@ -3,10 +3,17 @@
   margin-bottom: -150px;
   padding-top: 150px;
   z-index: 5000;
-  // background-image: url('../assets/textures/stardust.png');
+  @include mobile() {
+    padding-top: 25px;
+    padding-bottom: 75px;
+  }
   .title-image {
     top: -125px;
     left: -50px;
+    @include mobile() {
+      top: 0;
+      left: 0;
+    }
   }
   p {
     text-align: center;

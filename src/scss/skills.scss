@@ -1,19 +1,33 @@
 .skills {
   height: 750px;
   margin-top: -450px;
+  @include mobile() {
+    margin-top: 0;
+    height: auto;
+  }
   .skill-icons {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     width: 60%;
     margin-left: auto;
+    @include mobile() {
+      width: 100%;
+      margin-top: -150px;
+    }
     .icon {
       width: 25%;
       text-align: center;
       text-transform: uppercase;
       font-weight: 600;
+      @include mobile() {
+        font-size: 10px;
+      }
       object {
         height: 150px;
+        @include mobile() {
+          height: 75px;
+        }
       }
     }
   }

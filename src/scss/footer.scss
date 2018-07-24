@@ -7,6 +7,11 @@
   align-items: center;
   flex-direction: column;
   position: relative;
+  width: 100vw;
+  text-align: center;
+  @include mobile() {
+    min-height: 500px;
+  }
   #pink-box {
     position: absolute;
     top: -30px;
@@ -29,11 +34,15 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
     .icon-wrapper {
       display: flex;
       justify-content: center;
       align-items: center;
       margin: 0 25px;
+      @include mobile() {
+        width: 40%;
+      }
       svg {
         color: white;
         margin-right: 15px;

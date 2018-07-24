@@ -56,6 +56,10 @@ $orange: #ef5a29;
   position: absolute;
   top: 0;
   left: 0;
+  @include mobile() {
+    max-width: 150px;
+    position: initial;
+  }
 }
 body {
   padding: 0;
@@ -69,7 +73,7 @@ body {
 }
 .separator {
   width: 50%;
-  height: 350px;
+  height: 150px;
   background-image: linear-gradient(
     to top right,
     $blue-dark,
@@ -78,7 +82,7 @@ body {
     transparent
   );
   position: absolute;
-  top: -350px;
+  top: -150px;
   left: 0;
 }
 .separator.reverse {
@@ -105,6 +109,9 @@ body {
   height: 700px;
   top: 0;
   transform: rotate(180deg);
+  @include mobile() {
+    height: 300px; 
+  }
 }
 .separator.full.bottom {
   background-image: linear-gradient(
@@ -126,6 +133,9 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+  @include mobile() {
+    flex-direction: column;
+  }
 }
 .content-wrapper {
   position: relative;
@@ -136,10 +146,19 @@ section {
   @include laptop() {
     width: 1000px;
   }
+  @include mobile() {
+    width: 100vw;
+    font-size: 12px;
+    flex-direction: column;
+  }
 }
 .copy-wrapper {
   text-align: center;
   width: 50%;
+  @include mobile() {
+    width: 90%;
+    margin-top: -150px;
+  }
 }
 button {
   border-width: 3px;

@@ -4,6 +4,10 @@
   background-repeat: no-repeat;
   height: 1700px;
   position: relative;
+  @include mobile() {
+    height: auto;
+    padding-top: 200px;
+  }
   .tile-wrapper {
     margin-right: auto;
     display: flex;
@@ -11,12 +15,18 @@
     align-items: center;
     flex-wrap: wrap;
     min-width: 65%;
+    @include mobile() {
+      margin-top: -150px;
+    }
     .tile {
       height: 200px;
       width: calc(50% - 50px);
       margin: 25px;
       background-size: cover;
       background-position: center;
+      @include mobile() {
+        width: 100%;
+      }
     }
   }
   .title-image {

@@ -4,9 +4,6 @@ import AboutImage from '../../assets/titles/about-title.svg';
 const About = ({ aboutText }) => {
   return (
     <section className="about section">
-      {/* <div class="horizontal-line" />
-      <div class="horizontal-line" />
-      <div class="horizontal-line" /> */}
       <div className="separator" />
       <div className="separator reverse" />
 
