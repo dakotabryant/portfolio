@@ -1,54 +1,67 @@
-.header {
-  padding: 0 50px;
-  padding-top: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.logo {
+  max-width: 75px;
+  cursor: pointer;
+}
+.sun {
+  border-radius: 100%;
+  transition: ease-in-out 0.5s;
+  &:hover {
+    box-shadow: 0 0 45px rgba($color: #ef5a29, $alpha: 1);
+    transition: ease-in-out 0.5s;
+  }
+  &.is-open {
+    margin-right: 500px;
+    transition: ease-in-out 0.25s;
+  }
+}
+.menu {
   position: fixed;
-  width: 100%;
-  z-index: 10000;
-  .logo,
-  .sun {
-    max-width: 75px;
-    cursor: pointer;
+  width: 90px;
+  height: 100vh;
+  z-index: 1000000;
+  background-color: rgba($color: $blue-dark, $alpha: 0.7);
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  // -webkit-box-shadow: -9px 0px 45px 0px rgba($pink, 0.75);
+  // -moz-box-shadow: -9px 0px 45px 0px rgba($pink, 0.75);
+  // box-shadow: -9px 0px 45px 0px rgba($pink, 0.75);
+
+  .links {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 25vh;
+    div {
+      transform: rotate(-90deg);
+      margin: 0 25px;
+    }
   }
-  .sun {
-    border-radius: 100%;
-    transition: ease-in-out 1.5s;
-    &:hover {
-      box-shadow: 0 0 45px rgba($color: #ef5a29, $alpha: 1);
-      transition: ease-in-out 1.5s;
-    }
-    &.is-open {
-      margin-right: 500px;
-      transition: ease-in-out .25s;
-    }
-  }
-  .menu {
-    position: fixed;
-    width: 500px;
-    height: 100vh;
-    background-color: rgba($color: $blue-dark, $alpha: 1);
-    top: 0;
-    right: 0;
-    transition: ease-in-out .25s;
-    transform: translateX(500px);
-    &.is-open {
-      transition: ease-in-out .25s;
-      -webkit-box-shadow: -9px 0px 45px 0px rgba($pink, 0.75);
-      -moz-box-shadow: -9px 0px 45px 0px rgba($pink, 0.75);
-      box-shadow: -9px 0px 45px 0px rgba($pink, 0.75);
-      transform: translateX(0);
-    }
-    .links {
-      font-size: 26px;
-      font-weight: bold;
-      height: 100%;
-      width: 100%;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      flex-direction: column;
-    }
+}
+.button-wrapper {
+  margin-top: -10%;
+  background-color: rgba($color: $pink, $alpha: 0.2);
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 25px;
+  left: 25px;
+  position: fixed;
+  z-index: 1000000;
+  padding: 25px;
+  border-radius: 100%;
+  box-shadow: $pink-shadow;
+  border: 3px solid $pink;
+  cursor: pointer;
+  .music-icon {
+    color: white;
+    font-size: 22px;
   }
 }

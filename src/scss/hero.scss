@@ -14,26 +14,4 @@
     max-width: 65%;
     margin-bottom: 5%;
   }
-  .button-wrapper {
-    margin-top: -10%;
-    background-color: rgba($color: $pink, $alpha: .2);
-    width: 20px;
-    height: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    bottom: 25px;
-    left: 25px;
-    position: fixed;
-    z-index: 1000000;
-    padding: 25px;
-    border-radius: 100%;
-    box-shadow: $pink-shadow;
-    border: 3px solid $pink;
-    cursor: pointer;
-    .music-icon {
-      color: white;
-      font-size: 22px;
-    }
-  }
 }
