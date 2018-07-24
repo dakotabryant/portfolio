@@ -59,6 +59,7 @@ $orange: #ef5a29;
   @include mobile() {
     max-width: 150px;
     position: initial;
+    height: 250px;
   }
 }
 body {
