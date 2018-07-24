@@ -3,7 +3,7 @@ import AboutImage from '../../assets/titles/about-title.svg';
 
 const About = ({ aboutText }) => {
   return (
-    <div className="about section">
+    <section className="about section">
       {/* <div class="horizontal-line" />
       <div class="horizontal-line" />
       <div class="horizontal-line" /> */}
@@ -22,7 +22,7 @@ const About = ({ aboutText }) => {
           <button>View My Work</button>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

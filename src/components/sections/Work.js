@@ -4,7 +4,7 @@ import workTiles from '../../content/workTiles';
 
 const Work = () => {
   return (
-    <div className="work section">
+    <section className="work section">
       <div className="separator full" />
       <div className="separator full bottom" />
       <div className="content-wrapper">
@@ -27,7 +27,7 @@ const Work = () => {
           <button>See all Projects</button>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

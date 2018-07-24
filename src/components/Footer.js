@@ -5,7 +5,7 @@ import { faEnvelopeOpen } from '@fortawesome/free-solid-svg-icons';
 
 const Footer = () => {
   return (
-    <div className="footer">
+    <footer className="footer">
       <i id="pink-box" />
       <h2>I am currently only available for freelance projects.</h2>
       <div className="contact-icons">
@@ -19,7 +19,7 @@ const Footer = () => {
             );
           })}
       </div>
-    </div>
+    </footer>
   );
 };
 

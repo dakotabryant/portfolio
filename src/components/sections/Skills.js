@@ -4,7 +4,7 @@ import skillsIcons from '../../content/skills-icons';
 
 const Skills = () => {
   return (
-    <div className="section skills">
+    <section className="section skills">
       <div className="content-wrapper">
         <object
           aria-label="Skills"
@@ -27,7 +27,7 @@ const Skills = () => {
           })}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

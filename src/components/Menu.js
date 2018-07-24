@@ -6,7 +6,7 @@ import { faMusic } from '@fortawesome/free-solid-svg-icons';
 
 const Menu = ({ isOpen }) => {
   return (
-    <div className={`${isOpen ? 'menu is-open' : 'menu'}`}>
+    <header className={`${isOpen ? 'menu is-open' : 'menu'}`}>
       <img src={logo} alt="dakota bryant logo" className="logo" />
 
       <div className="links">
@@ -18,7 +18,7 @@ const Menu = ({ isOpen }) => {
       <div className="button-wrapper">
         <FontAwesomeIcon className="music-icon" icon={faMusic} />
       </div>
-    </div>
+    </header>
   );
 };
 
