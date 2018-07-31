@@ -11,6 +11,7 @@ const Work = () => {
           <label htmlFor="">
             <input type="text" />
           </label>
+          <button type="submit">Submit</button>
         </p>
       </form>
     </Layout>
