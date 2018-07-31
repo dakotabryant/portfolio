@@ -1,5 +1,7 @@
 import React from 'react';
 import AboutImage from '../../assets/titles/about-title.svg';
+import { Link } from 'gatsby';
+import { secondParagraph } from '../../content/copy';
 
 const About = ({ aboutText }) => {
   return (
@@ -16,7 +18,10 @@ const About = ({ aboutText }) => {
         />
         <div className="copy-wrapper">
           <p>{aboutText}</p>
-          <button>View My Work</button>
+          <p>{secondParagraph}</p>
+          <Link to="/about">
+            <button>Learn More</button>
+          </Link>
         </div>
       </div>
     </section>
