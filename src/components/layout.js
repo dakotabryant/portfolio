@@ -22,14 +22,20 @@ const Layout = ({ children }) => (
         },
       ]}
     />
-    <Header
-      siteTitle="Dakota Bryant - Javascript Engineer"
-      navLinks={NavLinks}
-    />
-    <Provider store={store}>
-      <React.Fragment>{children}</React.Fragment>
-    </Provider>
-    <Footer />
+    {document.readyState === 'complete' ? (
+      <React.Fragment>
+        <Header
+          siteTitle="Dakota Bryant - Javascript Engineer"
+          navLinks={NavLinks}
+        />
+        <Provider store={store}>
+          <React.Fragment>{children}</React.Fragment>
+        </Provider>
+        <Footer />
+      </React.Fragment>
+    ) : (
+      'Loading'
+    )}
   </React.Fragment>
 );
 
