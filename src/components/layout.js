@@ -22,7 +22,7 @@ const Layout = ({ children }) => (
         },
       ]}
     />
-    {document.readyState === 'complete' ? (
+    {typeof window !== 'undefined' && document.readyState === 'complete' ? (
       <React.Fragment>
         <Header
           siteTitle="Dakota Bryant - Javascript Engineer"
