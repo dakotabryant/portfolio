@@ -1,6 +1,7 @@
 import React from 'react';
 import WorkTitle from '../../assets/titles/work-vertical.svg';
 import workTiles from '../../content/workTiles';
+import { Link } from 'gatsby';
 
 const Work = () => {
   return (
@@ -24,7 +25,9 @@ const Work = () => {
               />
             );
           })}
-          <button>See all Projects</button>
+          <Link to="/work">
+            <button>See all Projects</button>
+          </Link>
         </div>
       </div>
     </section>

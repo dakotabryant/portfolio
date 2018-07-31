@@ -35,3 +35,13 @@
     left: initial;
   }
 }
+.work-page {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $blue-dark;
+  .hero-image {
+    max-width: 20vw;
+  }
+}

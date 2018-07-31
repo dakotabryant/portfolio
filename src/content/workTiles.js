@@ -1,5 +1,7 @@
 import taylor from '../assets/images/taylor.jpg';
 import wausau from '../assets/images/wausau.png';
+import gitwit from '../assets/images/gitwit.jpg';
+import flag from '../assets/images/tulsaflag.png';
 
 export default [
   {
@@ -11,11 +13,11 @@ export default [
     hoverText: 'Wausau Crosstrak',
   },
   {
-    image: taylor,
-    hoverText: 'Taylor Bryant Portfolios',
+    image: gitwit,
+    hoverText: 'Gitwit',
   },
   {
-    image: taylor,
-    hoverText: 'Taylor Bryant Portfolioz',
+    image: flag,
+    hoverText: 'Tulsa Flag',
   },
 ];

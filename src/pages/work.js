@@ -4,16 +4,10 @@ import WorkHero from '../components/sections/WorkHero';
 
 const Work = () => {
   return (
-    <Layout>
-      <WorkHero />
-      <form name="contact" netlify>
-        <p>
-          <label htmlFor="">
-            <input type="text" />
-          </label>
-          <button type="submit">Submit</button>
-        </p>
-      </form>
+    <Layout className="work-page">
+      <section className="work-page">
+        <WorkHero />
+      </section>
     </Layout>
   );
 };
