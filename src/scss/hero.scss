@@ -10,9 +10,6 @@
   justify-content: center;
   flex-direction: column;
   position: relative;
-  @include portrait() {
-    height: 30vh;
-  }
   @include mobile() {
     height: 50vh;
   }
