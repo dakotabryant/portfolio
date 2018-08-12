@@ -13,7 +13,9 @@
   bottom: 0;
   left: 0;
   @include mobile() {
-    min-height: 500px;
+    min-height: 300px;
+    padding: 25px;
+    font-size: 12px;
   }
   #pink-box {
     position: absolute;
@@ -21,8 +23,14 @@
     width: 60px;
     height: 60px;
     background-color: $pink;
+    cursor: pointer;
+    @include mobile() {
+      width: 40px;
+      height: 40px;
+      top: -20px;
+    }
     &:after {
-      content: "";
+      content: '';
       height: 30px;
       width: 30px;
       top: 23px;
@@ -31,6 +39,12 @@
       transform: rotate(45deg);
       border-left: 3px solid white;
       border-top: 3px solid white;
+      @include mobile() {
+        height: 20px;
+        width: 20px;
+        top: 15px;
+        left: 9px;
+      }
     }
   }
   .contact-icons {
@@ -38,6 +52,9 @@
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
+    @include mobile() {
+      font-size: 16px;
+    }
     .icon-wrapper {
       display: flex;
       justify-content: center;

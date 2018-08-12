@@ -26,7 +26,7 @@ const Work = () => {
             );
           })}
           <Link to="/work">
-            <button>See all Projects</button>
+            <button>More Info</button>
           </Link>
         </div>
       </div>
