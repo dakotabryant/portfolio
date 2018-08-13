@@ -69,6 +69,11 @@ $orange: #ef5a29;
     position: initial;
     height: 250px;
   }
+  @include tablet() {
+    max-width: 150px;
+    position: initial;
+    height: 250px;
+  }
 }
 body {
   padding: 0;
@@ -165,7 +170,6 @@ section {
   }
   @include mobile() {
     width: 100vw;
-    font-size: 12px;
     flex-direction: column;
   }
 }

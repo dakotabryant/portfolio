@@ -16,12 +16,14 @@
   }
 }
 .tile-wrapper {
-  margin-right: auto;
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
   min-width: 65%;
+  @include desktop() {
+    margin-right: auto;
+  }
   @include mobile() {
     margin-top: -150px;
   }
