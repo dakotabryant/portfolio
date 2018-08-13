@@ -17,7 +17,7 @@ const Work = () => {
             solutions.
           </p>
           <p>
-            While I can't publickly share most of the projects I've worked on,
+            While I can't publicly share most of the projects I've worked on,
             I'm happy to share a private portfolio on request.
           </p>
           <div className="tile-wrapper">
