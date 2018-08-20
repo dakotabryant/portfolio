@@ -38,3 +38,29 @@
     }
   }
 }
+.contact-form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  label {
+    color: white;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  input, textarea {
+    background-color: rgba($color: #000000, $alpha: 0);
+    border: 2px solid $pink;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    box-shadow: $pink-shadow;
+    resize: none;
+    width: 100%;
+  }
+  input {
+    margin-bottom: 25px;
+    padding-top: 15px;
+    padding-bottom: 5px;
+  }
+}

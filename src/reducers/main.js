@@ -2,7 +2,7 @@
 import Actions from '../actions/actionTypes';
 
 const nameInitialState = {
-  showOverlay: false,
+  showModal: false,
 };
 
 export const mainReducer = (state = nameInitialState, action) => {
@@ -15,7 +15,7 @@ export const mainReducer = (state = nameInitialState, action) => {
     case Actions.TOGGLE_MODAL:
       return {
         ...state,
-        showOverlay: !state.showOverlay,
+        showModal: !state.showModal,
       };
     default:
       return state;

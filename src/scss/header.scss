@@ -65,7 +65,7 @@
       height: auto;
       // font-size: 12px;
     }
-    a {
+    a, p {
       color: white;
       transform: rotate(-90deg);
       @include mobile() {

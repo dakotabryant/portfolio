@@ -4,6 +4,8 @@ import logo from '../assets/logos/Logo.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMusic } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'gatsby';
+import { connect } from 'react-redux';
+import { toggleModal } from '../actions/main';
 // import Sound from 'react-sound';
 // import Song from '../assets/afterHoursRun.mp3';
 
@@ -16,6 +18,9 @@ class Menu extends React.Component {
   }
   clickHandler = () => {
     this.setState({ playMusic: !this.state.playMusic });
+  };
+  toggleModal = () => {
+    this.props.dispatch(toggleModal());
   };
   render() {
     const { isOpen } = this.props;
@@ -31,11 +36,15 @@ class Menu extends React.Component {
         <div className="links">
           {navLinks &&
             navLinks.map(link => {
-              return (
-                <Link key={link.text} to={link.path}>
-                  {link.text}
-                </Link>
-              );
+              if (link.text === 'Contact') {
+                return <p onClick={this.toggleModal}>{link.text}</p>;
+              } else {
+                return (
+                  <Link key={link.text} to={link.path}>
+                    {link.text}
+                  </Link>
+                );
+              }
             })}
         </div>
         {/* <div className="button-wrapper">
@@ -51,4 +60,5 @@ class Menu extends React.Component {
   }
 }
 
-export default Menu;
+export default connect()(Menu);
+// export default Menu;

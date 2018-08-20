@@ -1,11 +1,8 @@
 import React from 'react';
-import Layout from '../components/layout';
-import ContactForm from '../components/ContactForm';
 
-const About = () => {
+const ContactModal = () => {
   return (
-    <Layout>
-      {/* <ContactForm /> */}
+    <div className="contact-modal">
       <form name="contact" netlify className="contact-form">
         <label htmlFor="name">Name</label>
         <input type="text" name="name" />
@@ -15,8 +12,8 @@ const About = () => {
         <textarea name="message" />
         <button type="submit">Send</button>
       </form>
-    </Layout>
+    </div>
   );
 };
 
-export default About;
+export default ContactModal;

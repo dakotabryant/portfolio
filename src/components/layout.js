@@ -7,6 +7,8 @@ import Footer from '../components/Footer';
 import { Provider } from 'react-redux';
 import store from '../store';
 import Loader from './Loader';
+import ContactModal from './ContactModal';
+import SiteContainer from './SiteContainer';
 
 const Layout = ({ children }) => (
   <React.Fragment>
@@ -26,12 +28,14 @@ const Layout = ({ children }) => (
       ]}
     />
     <React.Fragment>
-      <Header
-        siteTitle="Dakota Bryant - Javascript Engineer"
-        navLinks={NavLinks}
-      />
       <Provider store={store}>
-        <React.Fragment>{children}</React.Fragment>
+        <React.Fragment>
+          <Header
+            siteTitle="Dakota Bryant - Javascript Engineer"
+            navLinks={NavLinks}
+          />
+          <SiteContainer>{children}</SiteContainer>
+        </React.Fragment>
       </Provider>
       <Footer />
     </React.Fragment>
