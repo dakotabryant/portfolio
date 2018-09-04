@@ -27,6 +27,48 @@ const Layout = ({ children }) => (
           content:
             'developer, front-end, web, design, strategy, creative, technology, apps, html, css, javascript',
         },
+        {
+          property: 'og:site_name',
+          content: 'Dakota Bryant',
+        },
+        {
+          property: 'og:title',
+          content: 'Dakota Bryant',
+        },
+        {
+          property: 'og:type',
+          content: 'company',
+        },
+        {
+          property: 'og:image',
+          content: 'https://i.imgur.com/jpFR9BM.jpg',
+        },
+        {
+          property: 'og:description',
+          content:
+            'A humble collection of work from Dakota Bryant, a Javascript Engineer based out of Charlotte, NC.',
+        },
+        {
+          name: 'robots',
+          content: 'index, nofollow',
+        },
+        {
+          name: 'language',
+          content: 'English',
+        },
+        {
+          name: 'twitter:card',
+          content: 'summary',
+        },
+        {
+          name: 'twitter:description',
+          content:
+            'A humble collection of work from Dakota Bryant, a Javascript Engineer based out of Charlotte, NC.',
+        },
+        {
+          name: 'twitter:site',
+          content: '@dakotabryantCO',
+        },
       ]}
     />
     <React.Fragment>
