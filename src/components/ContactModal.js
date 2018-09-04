@@ -28,6 +28,8 @@ class ContactModal extends React.Component {
                 className="close-button"
                 onClick={onClose}
               />
+              <input type="hidden" name="form-name" value="contact" />
+
               <label htmlFor="name">Name</label>
               <input type="text" name="name" />
               <label htmlFor="email">Email</label>
