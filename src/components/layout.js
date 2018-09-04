@@ -9,9 +9,11 @@ import store from '../store';
 import Loader from './Loader';
 import ContactModal from './ContactModal';
 import SiteContainer from './SiteContainer';
+import FullStory from 'react-fullstory';
 
 const Layout = ({ children }) => (
   <React.Fragment>
+    <FullStory org="3S40K" />
     <Helmet
       title="Dakota Bryant - Javascript Engineer"
       meta={[
