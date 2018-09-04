@@ -3,6 +3,10 @@
   margin-bottom: -150px;
   padding-top: 150px;
   z-index: 5000;
+  @include laptop() {
+    margin-bottom: -100px;
+    padding-top: 50px;
+  }
   @include mobile() {
     padding-top: 25px;
     padding-bottom: 75px;
@@ -14,6 +18,9 @@
     @include mobile() {
       top: 0;
       left: 0;
+    }
+    @include laptop() {
+      top: -20px;
     }
   }
   p {
