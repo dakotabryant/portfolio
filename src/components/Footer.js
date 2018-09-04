@@ -17,10 +17,15 @@ class Footer extends Component {
           {socialMedia &&
             socialMedia.map(site => {
               return (
-                <div key={site.text} className="icon-wrapper">
+                <a
+                  target="blank"
+                  key={site.text}
+                  className="icon-wrapper"
+                  href={site.url}
+                >
                   <FontAwesomeIcon icon={site.icon} />
                   <p>{site.text}</p>
-                </div>
+                </a>
               );
             })}
         </div>

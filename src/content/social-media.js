@@ -4,27 +4,27 @@ import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 export default [
   {
-    path: db,
     description: 'email',
     text: 'hello@dakotabryant.com',
     icon: faEnvelopeOpen,
+    url: 'mailto:hello@dakotabryant.com',
   },
   {
-    path: db,
     description: 'phone',
     text: '970.712.7288',
     icon: faMobile,
+    url: 'tel:+19707127288',
   },
   {
-    path: db,
     description: 'github',
     text: 'dakotabryant',
     icon: faGithub,
+    url: 'https://github.com/dakotabryant',
   },
   {
-    path: db,
     description: 'linkedin',
     text: 'Dakota Bryant',
     icon: faLinkedin,
+    url: 'https://www.linkedin.com/in/dakota-bryant-5a179995/',
   },
 ];

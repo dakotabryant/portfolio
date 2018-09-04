@@ -1,17 +1,21 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import { connect } from 'react-redux';
+import { toggleModal } from '../../actions/main';
 
-const Contact = () => {
-  return (
-    <section className="section contact">
-      <div className="content-container">
-        <h2>have a project?</h2>
-        <Link to="/contact">
-          <button>contact me</button>
-        </Link>
-      </div>
-    </section>
-  );
-};
+class Contact extends React.Component {
+  render() {
+    return (
+      <section className="section contact">
+        <div className="content-container">
+          <h2>have a project?</h2>
+          <button onClick={() => this.props.dispatch(toggleModal())}>
+            contact me
+          </button>
+        </div>
+      </section>
+    );
+  }
+}
 
-export default Contact;
+export default connect()(Contact);
