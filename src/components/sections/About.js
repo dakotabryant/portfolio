@@ -19,7 +19,7 @@ const About = ({ aboutText }) => {
         <div className="copy-wrapper">
           <p>{aboutText}</p>
           <p>{secondParagraph}</p>
-          <Link to="/about">
+          <Link to="/work">
             <button>Learn More</button>
           </Link>
         </div>
