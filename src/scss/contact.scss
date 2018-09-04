@@ -5,19 +5,10 @@
   flex-direction: column;
   position: relative;
   margin: 75px 0;
-  // &:after {
-  //   content: "";
-  //   height: 50px;
-  //   width: 75px;
-  //   border-left: 7px solid rgba($color: grey, $alpha: 0.5);
-  //   position: absolute;
-  //   background-color: $blue-dark;
-  //   top: -29px;
-  //   left: 49%;
-  //   @include mobile() {
-  //     display: none;
-  //   }
-  // }
+  @include laptop() {
+    margin-top: 0;
+    
+  }
   .content-container {
     display: flex;
     justify-content: center;

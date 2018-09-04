@@ -11,10 +11,10 @@ const Work = () => {
         <WorkHero />
         <div className="content-wrapper">
           <p>
-            My capabilities range from one-off website solutions, to complex
-            native applications for mobile devices. I love being able to dig in
-            to any technology stack and come up with creative and impactful
-            solutions.
+            My capabilities range from a range of website solutions to complex
+            native applications for mobile devices. I love being able to dig
+            into any technology stack and come up with creative and impactful
+            solutions for each clients' individual needs.
           </p>
           <p>
             While I can't publicly share most of the projects I've worked on,

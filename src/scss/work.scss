@@ -8,6 +8,12 @@
     height: auto;
     padding-top: 200px;
   }
+  @include laptop() {
+    height: 1300px;
+  }
+  @include portrait() {
+    height: 1700px;
+  }
 
   .title-image {
     top: 0;
@@ -66,7 +72,8 @@
   padding-bottom: 75px;
   padding-top: 75px;
   .hero-image {
-    max-width: 20vw;
+    max-width: 40vw;
+    height: 75px;
     @include mobile() {
       max-width: 90%;
     }
