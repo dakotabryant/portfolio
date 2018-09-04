@@ -65,7 +65,11 @@
       height: auto;
       // font-size: 12px;
     }
-    a, p {
+    @include laptop() {
+      height: 25vh;
+    }
+    a,
+    p {
       color: white;
       transform: rotate(-90deg);
       @include mobile() {
