@@ -17,7 +17,12 @@ class ContactModal extends React.Component {
       return (
         <div className="contact-modal">
           {showModal && (
-            <form name="contact" netlify className="contact-form">
+            <form
+              name="contact"
+              data-netlify="true"
+              method="POST"
+              className="contact-form"
+            >
               <FontAwesomeIcon
                 icon={faTimesCircle}
                 className="close-button"
