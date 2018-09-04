@@ -6,6 +6,7 @@
   @include mobile() {
     padding-top: 25px;
     padding-bottom: 75px;
+    font-size: .75rem;
   }
   .title-image {
     top: -100px;
@@ -19,5 +20,8 @@
     text-align: center;
     letter-spacing: 2px;
     line-height: 1.5;
+  }
+  .content-wrapper {
+    width: 90%;
   }
 }
