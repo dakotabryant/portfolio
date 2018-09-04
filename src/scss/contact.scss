@@ -24,7 +24,7 @@
     align-items: center;
     flex-direction: column;
     width: 40%;
-    border: 7px solid rgba($color: grey, $alpha: .5);
+    border: 7px solid rgba($color: grey, $alpha: 0.5);
     padding: 50px 0;
     @include mobile() {
       width: 90%;
@@ -38,29 +38,70 @@
     }
   }
 }
-.contact-form {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+.contact-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000000;
   width: 100%;
-  label {
-    color: white;
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-  input, textarea {
-    background-color: rgba($color: #000000, $alpha: 0);
+  height: 100%;
+  background-color: rgba($color: #000000, $alpha: 0.9);
+  .contact-form {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    flex-direction: column;
     border: 2px solid $pink;
-    color: white;
-    font-weight: 600;
-    font-size: 16px;
-    box-shadow: $pink-shadow;
-    resize: none;
-    width: 100%;
-  }
-  input {
-    margin-bottom: 25px;
-    padding-top: 15px;
-    padding-bottom: 5px;
+    width: 500px;
+    height: 500px;
+    padding: 25px;
+    background-color: black;
+    label {
+      color: white;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    input,
+    textarea {
+      background-color: rgba($color: #000000, $alpha: 0);
+      border: 2px solid rgba($color: $pink, $alpha: 0.5);
+      color: white;
+      font-weight: 600;
+      font-size: 16px;
+      box-shadow: $pink-shadow;
+      resize: none;
+      width: 100%;
+      transition: cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+      &:focus {
+        border: 2px solid rgba($color: $pink, $alpha: 1);
+        transition: cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+      }
+    }
+    textarea {
+      height: 200px;
+    }
+    input {
+      margin-bottom: 25px;
+      padding-top: 15px;
+      padding-bottom: 5px;
+    }
+    button {
+      background-color: transparent;
+    }
+    .close-button {
+      color: $pink;
+      background-color: black;
+      position: absolute;
+      top: -20px;
+      right: -20px;
+      height: 40px;
+      width: 40px;
+      cursor: pointer;
+    }
   }
 }

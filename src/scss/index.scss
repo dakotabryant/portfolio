@@ -149,6 +149,9 @@ body {
 a {
   text-decoration: none;
 }
+.no-scroll {
+  overflow: hidden;
+}
 section {
   min-height: 350px;
   margin: 0 auto;

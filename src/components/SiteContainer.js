@@ -1,13 +1,19 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import ContactModal from './ContactModal';
+import { toggleModal } from '../actions/main';
 
 class SiteContainer extends Component {
+  handleClose = () => {
+    this.props.dispatch(toggleModal());
+  };
   render() {
-    console.log(this.props);
+    const { showModal } = this.props;
     return (
-      <div className={this.props.showModal ? 'no-scroll' : ''}>
+      <React.Fragment>
+        <ContactModal showModal={showModal} onClose={this.handleClose} />
         {this.props.children}
-      </div>
+      </React.Fragment>
     );
   }
 }
