@@ -1,5 +1,7 @@
 import React from 'react';
 import { navigateTo } from 'gatsby-link';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTimesCircle } from '@fortawesome/free-solid-svg-icons';
 
 function encode(data) {
   return Object.keys(data)
@@ -28,56 +30,51 @@ export default class ContactModal extends React.Component {
         ...this.state,
       }),
     })
-      .then(() => navigateTo(form.getAttribute('action')))
+      .then(this.props.onClose)
       .catch(error => alert(error));
   };
 
   render() {
-    return (
-      <div>
-        <h1>Contact</h1>
-        <form
-          name="contact"
-          method="post"
-          action="/thanks/"
-          data-netlify="true"
-          data-netlify-honeypot="bot-field"
-          onSubmit={this.handleSubmit}
-        >
-          {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
-          <input type="hidden" name="form-name" value="contact" />
-          <p hidden>
-            <label>
+    const { showModal, onClose } = this.props;
+    if (showModal) {
+      return (
+        <div className="contact-modal">
+          <form
+            className="contact-form"
+            name="contact"
+            method="post"
+            action="/"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+            onSubmit={this.handleSubmit}
+          >
+            <FontAwesomeIcon
+              icon={faTimesCircle}
+              className="close-button"
+              onClick={onClose}
+            />
+            {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
+            <input type="hidden" name="form-name" value="contact" />
+            <label hidden>
               Don’t fill this out:{' '}
               <input name="bot-field" onChange={this.handleChange} />
             </label>
-          </p>
-          <p>
             <label>
-              Your name:
-              <br />
+              Name
               <input type="text" name="name" onChange={this.handleChange} />
             </label>
-          </p>
-          <p>
             <label>
-              Your email:
-              <br />
+              Email
               <input type="email" name="email" onChange={this.handleChange} />
             </label>
-          </p>
-          <p>
             <label>
-              Message:
-              <br />
+              Message
               <textarea name="message" onChange={this.handleChange} />
             </label>
-          </p>
-          <p>
             <button type="submit">Send</button>
-          </p>
-        </form>
-      </div>
-    );
+          </form>
+        </div>
+      );
+    } else return '';
   }
 }
