@@ -1,57 +1,83 @@
 import React from 'react';
-import { push } from 'gatsby';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTimesCircle } from '@fortawesome/free-solid-svg-icons';
-import { toggleModal } from '../actions/main';
-import { connect } from 'react-redux';
+import { navigateTo } from 'gatsby-link';
 
-const encode = data => {
+function encode(data) {
   return Object.keys(data)
     .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
     .join('&');
-};
-
-class ContactModal extends React.Component {
-  componentWillReceiveProps(nextProps) {
-    const bodySelector = document.getElementsByTagName('body')[0];
-    if (nextProps.showModal) {
-      bodySelector.classList.add('no-scroll');
-    } else {
-      bodySelector.classList.remove('no-scroll');
-    }
-  }
-  render() {
-    const { showModal, onClose } = this.props;
-    if (showModal) {
-      return (
-        <div className="contact-modal">
-          {showModal && (
-            <form
-              className="contact-form"
-              name="contact-form"
-              method="post"
-              data-netlify="true"
-            >
-              <input type="hidden" name="form-name" value="contact-form" />
-              <FontAwesomeIcon
-                icon={faTimesCircle}
-                className="close-button"
-                onClick={onClose}
-              />
-
-              <label htmlFor="name">Name</label>
-              <input type="text" name="name" />
-              <label htmlFor="email">Email</label>
-              <input type="text" name="email" />
-              <label htmlFor="message">Message</label>
-              <textarea name="message" />
-              <button>Send</button>
-            </form>
-          )}
-        </div>
-      );
-    } else return '';
-  }
 }
 
-export default connect()(ContactModal);
+export default class ContactModal extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
+  handleChange = e => {
+    this.setState({ [e.target.name]: e.target.value });
+  };
+
+  handleSubmit = e => {
+    e.preventDefault();
+    const form = e.target;
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({
+        'form-name': form.getAttribute('name'),
+        ...this.state,
+      }),
+    })
+      .then(() => navigateTo(form.getAttribute('action')))
+      .catch(error => alert(error));
+  };
+
+  render() {
+    return (
+      <div>
+        <h1>Contact</h1>
+        <form
+          name="contact"
+          method="post"
+          action="/thanks/"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+          onSubmit={this.handleSubmit}
+        >
+          {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
+          <input type="hidden" name="form-name" value="contact" />
+          <p hidden>
+            <label>
+              Don’t fill this out:{' '}
+              <input name="bot-field" onChange={this.handleChange} />
+            </label>
+          </p>
+          <p>
+            <label>
+              Your name:
+              <br />
+              <input type="text" name="name" onChange={this.handleChange} />
+            </label>
+          </p>
+          <p>
+            <label>
+              Your email:
+              <br />
+              <input type="email" name="email" onChange={this.handleChange} />
+            </label>
+          </p>
+          <p>
+            <label>
+              Message:
+              <br />
+              <textarea name="message" onChange={this.handleChange} />
+            </label>
+          </p>
+          <p>
+            <button type="submit">Send</button>
+          </p>
+        </form>
+      </div>
+    );
+  }
+}
