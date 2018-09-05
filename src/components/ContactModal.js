@@ -35,7 +35,7 @@ class ContactModal extends React.Component {
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({ 'form-name': 'contact', ...this.state }),
+      body: encode({ name: 'contact', ...this.state }),
     })
       .then(() => this.props.dispatch(toggleModal()))
       .catch(error => alert(error));
@@ -49,7 +49,11 @@ class ContactModal extends React.Component {
       return (
         <div className="contact-modal">
           {showModal && (
-            <form className="contact-form" onSubmit={this.handleSubmit}>
+            <form
+              className="contact-form"
+              onSubmit={this.handleSubmit}
+              data-netlify="true"
+            >
               <input type="hidden" name="form-name" value="contact" />
               <FontAwesomeIcon
                 icon={faTimesCircle}
