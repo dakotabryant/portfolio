@@ -12,7 +12,7 @@ class Footer extends Component {
     return (
       <footer className="footer">
         <i id="pink-box" onClick={this.clickHandler} />
-        <h2>I am currently only available for freelance projects.</h2>
+        <h2>I am actively looking for new opportunities.</h2>
         <div className="contact-icons">
           {socialMedia &&
             socialMedia.map(site => {
