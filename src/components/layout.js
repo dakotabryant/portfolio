@@ -6,8 +6,6 @@ import Header from '../components/header';
 import Footer from '../components/Footer';
 import { Provider } from 'react-redux';
 import store from '../store';
-import Loader from './Loader';
-import ContactModal from './ContactModal';
 import SiteContainer from './SiteContainer';
 import FullStory from 'react-fullstory';
 

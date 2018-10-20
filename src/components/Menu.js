@@ -24,9 +24,6 @@ class Menu extends React.Component {
   };
   render() {
     const { isOpen } = this.props;
-    // const musicValue = this.state.playMusic
-    //   ? Sound.status.PLAYING
-    //   : Sound.status.PAUSED;
     return (
       <header className={`${isOpen ? 'menu is-open' : 'menu'}`}>
         <Link to="/" className="link-logo">
@@ -47,14 +44,6 @@ class Menu extends React.Component {
               }
             })}
         </div>
-        {/* <div className="button-wrapper">
-          <FontAwesomeIcon
-            className="music-icon"
-            icon={faMusic}
-            onClick={this.clickHandler}
-          />
-          <Sound url={Song} playStatus={musicValue} />
-        </div> */}
       </header>
     );
   }

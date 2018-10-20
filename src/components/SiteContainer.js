@@ -8,11 +8,11 @@ class SiteContainer extends Component {
     this.props.dispatch(toggleModal());
   };
   render() {
-    const { showModal } = this.props;
+    const { showModal, children } = this.props;
     return (
       <React.Fragment>
         <ContactModal showModal={showModal} onClose={this.handleClose} />
-        {this.props.children}
+        {children}
       </React.Fragment>
     );
   }
